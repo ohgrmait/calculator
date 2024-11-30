@@ -48,6 +48,9 @@ clearButton.addEventListener("click", () => {
 
 digitButtons.forEach((digitButton) => {
   digitButton.addEventListener("click", () => {
-    display.textContent = digitButton.textContent;
+    if (display.textContent.length > 10) {
+      return;
+    }
+    display.textContent += digitButton.textContent;
   });
 });
