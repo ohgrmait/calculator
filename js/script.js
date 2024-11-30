@@ -40,11 +40,18 @@ let secondNumber = -23;
 const display = document.querySelector(".display");
 
 const clearButton = document.querySelector(".buttons .cls");
+const operButtons = document.querySelectorAll(".buttons .oper");
 const digitButtons = document.querySelectorAll(".buttons .num");
 
 clearButton.addEventListener("click", () => {
   display.textContent = '';
-})
+});
+
+operButtons.forEach((operButton) => {
+  operButton.addEventListener("click", () => {
+    display.textContent = operButton.textContent;
+  });
+});
 
 digitButtons.forEach((digitButton) => {
   digitButton.addEventListener("click", () => {
