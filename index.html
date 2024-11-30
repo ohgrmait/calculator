@@ -5,8 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <script src="./js/script.js"></script>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    .main-container {
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .display {
+      width: 300px;
+      text-align: right;
+      font-size: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      flex-basis: 75px;
+      height: 75px;
+      font-size: 30px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Calculator</h1>
+  <div class="main-container">
+    <div class="heading">
+      <h1>Calculator</h1>
+    </div>
+    <div class="display">
+      0123456789
+    </div>
+    <div class="buttons">
+      <button class="btn">C</button>
+      <button class="btn"></button>
+      <button class="btn"></button>
+      <button class="btn">/</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn">*</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">-</button>
+      <button class="btn">3</button>
+      <button class="btn">2</button>
+      <button class="btn">1</button>
+      <button class="btn">+</button>
+      <button class="btn"></button>
+      <button class="btn">0</button>
+      <button class="btn"></button>
+      <button class="btn">=</button>
+    </div>
+  </div>
 </body>
 </html>
