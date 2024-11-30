@@ -39,7 +39,12 @@ let secondNumber = -23;
 
 const display = document.querySelector(".display");
 
+const clearButton = document.querySelector(".buttons .cls");
 const digitButtons = document.querySelectorAll(".buttons .num");
+
+clearButton.addEventListener("click", () => {
+  display.textContent = '';
+})
 
 digitButtons.forEach((digitButton) => {
   digitButton.addEventListener("click", () => {
