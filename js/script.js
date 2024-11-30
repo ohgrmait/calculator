@@ -37,4 +37,12 @@ let firstNumber = 3.34;
 let operator = "/";
 let secondNumber = -23;
 
-console.log(operate(firstNumber, operator, secondNumber));
+const display = document.querySelector(".display");
+
+const digitButtons = document.querySelectorAll(".buttons .num");
+
+digitButtons.forEach((digitButton) => {
+  digitButton.addEventListener("click", () => {
+    display.textContent = digitButton.textContent;
+  });
+});
