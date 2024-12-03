@@ -50,6 +50,12 @@ function getRandomWords() {
 
 function handleClearEntry() {
   if (!isNaN(minorDisplay.textContent)) {
+    if (currNumber === null) {
+      minorDisplay.textContent = "";
+      majorDisplay.textContent = getRandomWords();
+      setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+      return;
+    }
     currNumber = currNumber.slice(0, -1);
     minorDisplay.textContent = currNumber;
   } else {
@@ -105,6 +111,12 @@ function handleEquals(arg) {
 }
 
 function handleDecimals(arg) {
+  if (currNumber === null) {
+    minorDisplay.textContent = "";
+    majorDisplay.textContent = getRandomWords();
+    setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+    return;
+  }
   if (currNumber.includes(".")) {
     return;
   }
