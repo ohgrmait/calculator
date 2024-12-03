@@ -48,6 +48,31 @@ function getRandomWords() {
   return words[getRandomIntInclusive(0, words.length - 1)];
 }
 
+function handleClearEntry() {
+  if (!isNaN(minorDisplay.textContent)) {
+    currNumber = currNumber.slice(0, -1);
+    minorDisplay.textContent = currNumber;
+  } else {
+    if (!minorDisplay.textContent.includes("ANS")) {
+      if (isNaN(minorDisplay.textContent.at(-1))) {
+        return;
+      }
+      if (currNumber === null) {
+        minorDisplay.textContent = "ANS";
+        return;
+      }
+      currNumber = currNumber.slice(0, -1);
+      minorDisplay.textContent = prevNumber.concat(operator).concat(currNumber);
+    } else {
+      if (minorDisplay.textContent.at(-1) === "S") {
+        return;
+      }
+      currNumber = currNumber.slice(0, -1);
+      minorDisplay.textContent = "ANS".concat(operator).concat(currNumber);
+    }
+  }
+}
+
 function handleAllClear() {
   result = null;
   operator = null;
@@ -77,6 +102,14 @@ function handleEquals(arg) {
     majorDisplay.textContent = currNumber;
     minorDisplay.textContent = "";
   }
+}
+
+function handleDecimals(arg) {
+  if (currNumber.includes(".")) {
+    return;
+  }
+  minorDisplay.textContent += arg;
+  currNumber += arg;
 }
 
 function handleOperators(arg) {
@@ -142,11 +175,17 @@ function handleCalculation(arg) {
     case "-": case "+":
       handleOperators(arg);
       break;
+    case ".":
+      handleDecimals(arg);
+      break;
     case "=":
       handleEquals(arg);
       break;
     case "AC":
       handleAllClear();
+      break;
+    case "DEL":
+      handleClearEntry();
       break;
   }
 }
