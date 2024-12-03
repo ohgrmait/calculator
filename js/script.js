@@ -38,7 +38,8 @@ let operator = null;
 let firstNumber = null;
 let secondNumber = null;
 
-buttons = document.querySelectorAll(".btn");
-const display = document.querySelector(".display");
+const buttons = document.querySelectorAll(".btn");
+const minorDisplay = document.querySelector(".minor-display");
+const majorDisplay = document.querySelector(".major-display");
 
 buttons.forEach(button => button.addEventListener("click", handleEvent));
