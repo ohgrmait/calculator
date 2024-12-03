@@ -33,31 +33,12 @@ function operate(firstNumber, operator, secondNumber) {
   return result;
 }
 
-let firstNumber = 3.34;
-let operator = "/";
-let secondNumber = -23;
+let result = null
+let operator = null;
+let firstNumber = null;
+let secondNumber = null;
 
+buttons = document.querySelectorAll(".btn");
 const display = document.querySelector(".display");
 
-const clearButton = document.querySelector(".buttons .cls");
-const operButtons = document.querySelectorAll(".buttons .oper");
-const digitButtons = document.querySelectorAll(".buttons .num");
-
-clearButton.addEventListener("click", () => {
-  display.textContent = '';
-});
-
-operButtons.forEach((operButton) => {
-  operButton.addEventListener("click", () => {
-    display.textContent = operButton.textContent;
-  });
-});
-
-digitButtons.forEach((digitButton) => {
-  digitButton.addEventListener("click", () => {
-    if (display.textContent.length > 10) {
-      return;
-    }
-    display.textContent += digitButton.textContent;
-  });
-});
+buttons.forEach(button => button.addEventListener("click", handleEvent));
