@@ -14,6 +14,29 @@ function divide(a, b) {
   return a / b;
 }
 
+function commenceExplosion() {
+  minorDisplay.textContent = "Staring explosion sequence...";
+  setTimeout(() => {
+    minorDisplay.textContent = "Get ready to explode...";
+    majorDisplay.textContent = 3;
+  }, 1.0 * 1000);
+  setTimeout(() => {
+    minorDisplay.textContent = "Get up and run...";
+    majorDisplay.textContent = 2;
+  }, 2.0 * 1000);
+  setTimeout(() => {
+    minorDisplay.textContent = "Too late now...";
+    majorDisplay.textContent = 1;
+  }, 3.0 * 1000);
+  setTimeout(() => {
+    minorDisplay.textContent = "";
+    majorDisplay.textContent = "BOOOOOOM!";
+  }, 4.0 * 1000);
+  setTimeout(() => {
+    handleAllClear();
+  }, 5.0 * 1000);
+}
+
 function operate(firstNumber, operator, secondNumber) {
   let result = null;
   switch (operator) {
@@ -98,6 +121,10 @@ function handleEquals(arg) {
   }
   if (operator !== null) {
     result = operate(+prevNumber, operator, +currNumber);
+    if (result === Infinity) {
+      commenceExplosion();
+      return;
+    }
     if (result.toString().length > 10) {
       result = result.toPrecision(4);
     }
@@ -140,6 +167,10 @@ function handleOperators(arg) {
   } else if (currNumber !== null) {
     minorDisplay.textContent = "ANS";
     result = operate(+prevNumber, operator, +currNumber);
+    if (result === Infinity) {
+      commenceExplosion();
+      return;
+    }
     if (result.toString().length > 10) {
       result = result.toPrecision(4);
     }
