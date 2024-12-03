@@ -33,6 +33,14 @@ function operate(firstNumber, operator, secondNumber) {
   return result;
 }
 
+function handleEvent(e) {
+  let arg = null;
+  if (e.type === "click") {
+    arg = e.target.textContent;
+  }
+  calculate(arg);
+}
+
 let result = null
 let operator = null;
 let firstNumber = null;
