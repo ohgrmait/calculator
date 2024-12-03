@@ -182,9 +182,11 @@ function handleCalculation(arg) {
       handleEquals(arg);
       break;
     case "AC":
+    case "Delete":
       handleAllClear();
       break;
     case "DEL":
+    case "Backspace":
       handleClearEntry();
       break;
   }
@@ -194,6 +196,8 @@ function handleEvent(e) {
   let arg = null;
   if (e.type === "click") {
     arg = e.target.textContent;
+  } else if (e.type === "keyup") {
+    arg = e.key;
   }
   handleCalculation(arg);
 }
@@ -209,4 +213,5 @@ const buttons = document.querySelectorAll(".btn");
 const minorDisplay = document.querySelector(".minor-display");
 const majorDisplay = document.querySelector(".major-display");
 
+document.querySelector("html").addEventListener("keyup", handleEvent);
 buttons.forEach(button => button.addEventListener("click", handleEvent));
