@@ -14,25 +14,46 @@ function divide(a, b) {
   return a / b;
 }
 
+function enableButtons() {
+  for (const button of buttons) {
+    if (button.disabled === true) {
+      button.disabled = false;
+      button.style.color = "white";
+    }
+  }
+}
+
+function disableButtons() {
+  for (const button of buttons) {
+    button.disabled = true;
+    button.style.color = "#cc313e5f";
+  }
+}
+
 function commenceExplosion() {
-  minorDisplay.textContent = "Staring explosion sequence...";
+  disableButtons();
+  countdown.play();
+  minorDisplay.textContent = "Staring explosion sequence..";
+  majorDisplay.textContent = "";
   setTimeout(() => {
-    minorDisplay.textContent = "Get ready to explode...";
+    minorDisplay.textContent = "Get ready to explode..";
     majorDisplay.textContent = 3;
   }, 1.0 * 1000);
   setTimeout(() => {
-    minorDisplay.textContent = "Get up and run...";
+    minorDisplay.textContent = "Get up and run..";
     majorDisplay.textContent = 2;
   }, 2.0 * 1000);
   setTimeout(() => {
-    minorDisplay.textContent = "Too late now...";
+    minorDisplay.textContent = "Too late now..";
     majorDisplay.textContent = 1;
   }, 3.0 * 1000);
   setTimeout(() => {
+    blastoff.play();
     minorDisplay.textContent = "";
-    majorDisplay.textContent = "BOOOOOOM!";
+    majorDisplay.textContent = "BOOOOOOOOM!";
   }, 4.0 * 1000);
   setTimeout(() => {
+    enableButtons();
     handleAllClear();
   }, 5.0 * 1000);
 }
@@ -68,15 +89,20 @@ function getRandomWords() {
     "NOOO!", "WHAT?", "Serious?",
     "Holy Moly!", "Buhbye!", "Sleeping?"
   ]
+  errorAudio.play();
   return words[getRandomIntInclusive(0, words.length - 1)];
 }
 
 function handleClearEntry() {
   if (!isNaN(minorDisplay.textContent)) {
     if (currNumber === null) {
+      disableButtons();
       minorDisplay.textContent = "";
       majorDisplay.textContent = getRandomWords();
-      setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+      setTimeout(() => {
+        enableButtons();
+        handleAllClear();
+      }, 0.75 * 1000);
       return;
     }
     currNumber = currNumber.slice(0, -1);
@@ -114,14 +140,18 @@ function handleAllClear() {
 function handleEquals(arg) {
   equalsPressed = true;
   if (currNumber === null) {
+    disableButtons();
     minorDisplay.textContent = "";
     majorDisplay.textContent = getRandomWords();
-    setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+    setTimeout(() => {
+      enableButtons();
+      handleAllClear();
+    }, 0.75 * 1000);
     return;
   }
   if (operator !== null) {
     result = operate(+prevNumber, operator, +currNumber);
-    if (result === Infinity) {
+    if (isNaN(result) || result === Infinity) {
       commenceExplosion();
       return;
     }
@@ -139,9 +169,13 @@ function handleEquals(arg) {
 
 function handleDecimals(arg) {
   if (currNumber === null) {
+    disableButtons();
     minorDisplay.textContent = "";
     majorDisplay.textContent = getRandomWords();
-    setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+    setTimeout(() => {
+      enableButtons();
+      handleAllClear();
+    }, 0.75 * 1000);
     return;
   }
   if (currNumber.includes(".")) {
@@ -153,8 +187,12 @@ function handleDecimals(arg) {
 
 function handleOperators(arg) {
   if (prevNumber == null && currNumber == null) {
+    disableButtons();
     majorDisplay.textContent = getRandomWords();
-    setTimeout(() => { handleAllClear(); }, 0.75 * 1000);
+    setTimeout(() => {
+      enableButtons();
+      handleAllClear();
+    }, 0.75 * 1000);
     return;
   }
   if (operator === null) {
@@ -167,7 +205,7 @@ function handleOperators(arg) {
   } else if (currNumber !== null) {
     minorDisplay.textContent = "ANS";
     result = operate(+prevNumber, operator, +currNumber);
-    if (result === Infinity) {
+    if (isNaN(result) || result === Infinity) {
       commenceExplosion();
       return;
     }
@@ -253,6 +291,11 @@ let currNumber = null;
 let equalsPressed = false;
 
 const buttons = document.querySelectorAll(".btn");
+
+const errorAudio = document.querySelector("#error");
+const blastoff = document.querySelector("#blastoff");
+const countdown = document.querySelector("#countdown");
+
 const minorDisplay = document.querySelector(".minor-display");
 const majorDisplay = document.querySelector(".major-display");
 
