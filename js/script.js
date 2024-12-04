@@ -228,7 +228,7 @@ function handleCalculation(arg) {
     case "Delete":
       handleAllClear();
       break;
-    case "DEL":
+    case "CE":
     case "Backspace":
       handleClearEntry();
       break;

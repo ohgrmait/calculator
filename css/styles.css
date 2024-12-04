@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Nabla&family=Rationale&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -8,8 +13,21 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: hsl(0, 0%, 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Akronim", sans-serif;
+  font-size: 55px;
+  color: #CC313D;
+  text-shadow: #FC0 1px 0 10px;
+}
+
 .main-container {
-  width: 320px;
+  width: 460px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,13 +35,49 @@ html {
   margin: 0 auto;
 }
 
+.display {
+  user-select: none;
+  background-color: #CC313D;
+  padding: 15px;
+  border: none;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 6px 6px #958f8f;
+}
+
 .minor-display,
 .major-display {
-  border: 1px solid saddlebrown;
-  width: 300px;
-  height: 60px;
+  padding: 8px;
+  width: 430px;
   text-align: right;
   font-size: 50px;
+  background-color: white;
+}
+
+.minor-display {
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: "Rationale", sans-serif;
+  font-weight: 200;
+  font-size: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #CC313D;
+}
+
+.major-display {
+  height: 70px;
+  font-family: "Iceberg", sans-serif;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-weight: 300;
+  font-size: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #CC313D;
 }
 
 .minor-display {
@@ -38,10 +92,34 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: #CC313D;
+  gap: 10px;
+  padding: 0 10px 10px 10px;
+  border: none;
+  box-shadow: 0 6px 6px #958f8f;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .btn {
-  flex-basis: 75px;
+  flex-basis: 100px;
   height: 75px;
-  font-size: 30px;
+  font-size: 40px;
+  font-family: "Joti One", sans-serif;
+  background-color: #CC313D;
+  color: white;
+  text-shadow: 1px 1px 2px rgb(89, 85, 85), 0 0 0.1em rgb(255, 255, 255);
+  border: none;
+  border-radius: 20px;
+  box-shadow: -2px -2px 2px #af9d9e, 2px 2px 5px #a91622;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: hsl(355, 61%, 53%);
+}
+
+.btn:active {
+  background-color: #CC313D;
 }
