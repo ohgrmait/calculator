@@ -23,7 +23,6 @@ body {
 }
 
 .header, .footer {
-  height: 100px;
   display: flex;
   color: #CC313D;
   user-select: none;
@@ -35,12 +34,14 @@ body {
 }
 
 .header {
-  font-size: 35px;
+  height: 70px;
+  font-size: 26px;
   border-bottom: 2mm ridge rgb(205, 50, 71);
 }
 
 .footer {
-  font-size: 20px;
+  height: 50px;
+  font-size: 16px;
   border-top: 2mm ridge rgb(205, 50, 71);
 }
 
