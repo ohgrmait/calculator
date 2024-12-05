@@ -40,10 +40,10 @@
   <p>This is a screen cast of an operation from keyboard.</p>
 
   <img src="./assets/img/demo/backspace-demo.gif" alt="Screen cast of an operation with a mouse">
-  <p>This is a screen cast of the CE button that cleares entry.</p>
+  <p>This is a screen cast of the CE button that clears entry.</p>
 
   <img src="./assets/img/demo/clear-demo.gif" alt="Screen cast of the zero divsion error type">
-  <p>This is a screen cast of the AC button that cleares workspace.</p>
+  <p>This is a screen cast of the AC button that clears workspace.</p>
 </div>
 
 ## Technologies
@@ -55,7 +55,7 @@
 - ***GitHub Pages***
 
 ## Self Reflections
-- > As of now, this is the hardest project that I've worked upon (much more worse and time-consuming than my [previous project](https://github.com/ohgrmait/etch-a-sketch)). It took several days: initially it felt impossible because there was lesser hand-holding in the project specs but my persistence and grit got me to the finish line. **In the end, a lot of features creeped in and a lot of bugs were left unfixed. So unless some of the bugs are major and glaringly obvious, I don't think I will be fixing them anymore because I'm happy with what I've achieved.**
+- > As of now, this is the hardest project that I've worked upon (much worse and time-consuming than my [previous project](https://github.com/ohgrmait/etch-a-sketch)). It took several days: initially it felt impossible because there was lesser hand-holding in the project specs but my persistence and grit got me to the finish line. **In the end, a lot of features creeped in and a lot of bugs were left unfixed. So unless some of the bugs are major and glaringly obvious, I don't think I will be fixing them anymore because I'm happy with what I've achieved.**
 
 - > I learned the basics of objects before starting this project. My main resources that proved to be lifesavers were good old [google](https://www.google.com/), [stack overflow](https://stackoverflow.com/), [MDN web docs](https://developer.mozilla.org/en-US/), [DevDocs](https://devdocs.io/), and [TOP's discord server](https://discord.com/invite/fbFCkYabZB). I had to do a heavy amount of research because I kept finding bugs and then fixing them. This debugging process was extermely strenous but it forced me to use the [JavaScript developer tools](https://developer.chrome.com/docs/devtools/javascript). Most importantly, a lot of this was inspired from [Manon Lef's calculator](https://manonlef.github.io/calculator/) - this definitely made me want to make out a more fleshed-out version of a calculator with some fancy bells and whistles.
 
