@@ -26,43 +26,24 @@
 <div align="center">
   <img src="./assets/img/screenshots/index-page.png" alt="Screenshot of the index page">
   <p>This is a screenshot of the index page.</p>
-</div>
 
-<div align="center" style="display: flex; gap: 30px;">
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/error1-demo.gif" alt="Screen cast of the zero divsion error type" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of the error when there is division by zero yielding a result of either Infinity or NaN.</p>
-  </div>
+  <img src="./assets/img/demo/error1-demo.gif" alt="Screen cast of the zero divsion error type">
+  <p>This is a screen cast of the zero division error.</p>
 
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/error2-demo.gif" alt="Screen cast of the zero divsion error type" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of the error which occurs when any of the operators, decmial, or CE are pressed on its own.</p>
-  </div>
-</div>
+  <img src="./assets/img/demo/error2-demo.gif" alt="Screen cast of the zero divsion error type">
+  <p>This is a screen cast of the random word error.</p>
 
+  <img src="./assets/img/demo/mouse-demo.gif" alt="Screen cast of an operation with a mouse">
+  <p>This is a screen cast of an operation from mouse.</p>
 
-<div align="center" style="display: flex; gap: 30px;">
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/mouse-demo.gif" alt="Screen cast of an operation with a mouse" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of an operation that results from mouse clicks; here the result is in scientific notation.</p>
-  </div>
-  
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/keyboard-demo.gif" alt="Screen cast of the zero divsion error type" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of an operation that results from keyboard presses; here the display shows decimal numbers.</p>
-  </div>
-</div>
+  <img src="./assets/img/demo/keyboard-demo.gif" alt="Screen cast of the zero divsion error type">
+  <p>This is a screen cast of an operation from keyboard.</p>
 
-<div align="center" style="display: flex; gap: 30px;">
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/backspace-demo.gif" alt="Screen cast of an operation with a mouse" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of the CE button that cleares entry (like backspace) and allows user to re-enter input.</p>
-  </div>
+  <img src="./assets/img/demo/backspace-demo.gif" alt="Screen cast of an operation with a mouse">
+  <p>This is a screen cast of the CE button that cleares entry.</p>
 
-  <div style="height: auto; width: 800px;">
-    <img src="./assets/img/demo/clear-demo.gif" alt="Screen cast of the zero divsion error type" style="height: auto; width: 400px; border-radius: 20px;">
-    <p>This is a screen cast of the AC button that cleares entry (like delete) and cleares the entire workspace.</p>
-  </div>
+  <img src="./assets/img/demo/clear-demo.gif" alt="Screen cast of the zero divsion error type">
+  <p>This is a screen cast of the AC button that cleares workspace.</p>
 </div>
 
 ## Technologies
