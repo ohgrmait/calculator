@@ -25,25 +25,26 @@
 ## Showcase
 <div align="center">
   <img src="./assets/img/screenshots/index-page.png" alt="Screenshot of the index page">
+  <p></p>
   <p>This is a screenshot of the index page.</p>
 
-  <img src="./assets/img/demo/error1-demo.gif" alt="Screen cast of the zero divsion error type">
-  <p>This is a screen cast of the zero division error.</p>
+  <p align="center">
+    <img src="./assets/img/demo/error1-demo.gif" alt="Screen cast of the zero divsion error type" height="auto" width="49%">
+    <img src="./assets/img/demo/error2-demo.gif" alt="Screen cast of the zero divsion error type" height="auto" width="49%">
+    <p>This is a screen cast of the zero division error and random word error.</p>
+  </p>
+  
+  <p align="center">
+    <img src="./assets/img/demo/mouse-demo.gif" alt="Screen cast of an operation with a mouse" width="49%">
+    <img src="./assets/img/demo/keyboard-demo.gif" alt="Screen cast of the zero divsion error type" width="49%">
+    <p>This is a screen cast of an operation from mouse and an operation from keyboard.</p>
+  </p>
 
-  <img src="./assets/img/demo/error2-demo.gif" alt="Screen cast of the zero divsion error type">
-  <p>This is a screen cast of the random word error.</p>
-
-  <img src="./assets/img/demo/mouse-demo.gif" alt="Screen cast of an operation with a mouse">
-  <p>This is a screen cast of an operation from mouse.</p>
-
-  <img src="./assets/img/demo/keyboard-demo.gif" alt="Screen cast of the zero divsion error type">
-  <p>This is a screen cast of an operation from keyboard.</p>
-
-  <img src="./assets/img/demo/backspace-demo.gif" alt="Screen cast of an operation with a mouse">
-  <p>This is a screen cast of the CE button that clears entry.</p>
-
-  <img src="./assets/img/demo/clear-demo.gif" alt="Screen cast of the zero divsion error type">
-  <p>This is a screen cast of the AC button that clears workspace.</p>
+<p align="center">
+    <img src="./assets/img/demo/backspace-demo.gif" alt="Screen cast of an operation with a mouse" width="49%">
+    <img src="./assets/img/demo/clear-demo.gif" alt="Screen cast of the zero divsion error type" width="49%">
+    <p>This is a screen cast of the AC and CE button that clears entries and workspace.</p>
+  </p>
 </div>
 
 ## Technologies
