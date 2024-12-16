@@ -61,6 +61,7 @@
 - > I learned the basics of objects before starting this project. My main resources that proved to be lifesavers were good old [google](https://www.google.com/), [stack overflow](https://stackoverflow.com/), [MDN web docs](https://developer.mozilla.org/en-US/), [DevDocs](https://devdocs.io/), and [TOP's discord server](https://discord.com/invite/fbFCkYabZB). I had to do a heavy amount of research because I kept finding bugs and then fixing them. This debugging process was extermely strenous but it forced me to use the [JavaScript developer tools](https://developer.chrome.com/docs/devtools/javascript). Most importantly, a lot of this was inspired from [Manon Lef's calculator](https://manonlef.github.io/calculator/) - this definitely made me want to make out a more fleshed-out version of a calculator with some fancy bells and whistles.
 
 ## Acknowledgements
+- Credit for the audio goes to [freesound_community](https://pixabay.com/users/freesound_community-46691455/) ([pixabay](https://pixabay.com/sound-effects/)).
 - Credit for the inspiration in parts of the design process goes to [Manon Lef's calculator](https://manonlef.github.io/calculator/).
 - Credit for README goes to [ritaly's README cheatsheet](https://github.com/ritaly/README-cheatsheet) and [ArjunSaili1's comment](https://github.com/TheOdinProject/curriculum/discussions/25472#discussioncomment-5889343).
 
