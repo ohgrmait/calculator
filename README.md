@@ -50,6 +50,7 @@
 ## Technologies
 - ***Git***
 - ***CLI***
+- ***CSS***
 - ***HTML***
 - ***GitHub***
 - ***JavaScript***
